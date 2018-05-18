@@ -1,16 +1,95 @@
 import os
 
+
 def Skull():
     os.system('cls')
     # Manually set characters on screen for funs
-    print(("x"*11)+("\n")+("x"*11))
-    print(("x"*3)+(" "*5)+("x"*3)+("\n")+("x"*3)+(" "*5)+("x"*3))
-    print(("x"*3)+(" ")+("x")+(" ")+("x")+(" ")+("x"*3))
-    print(("x"*3)+(" ")+("x")+(" ")+("x")+(" ")+("x"*3))
-    print(("x"*3)+(" "*5)+("x"*3))
-    print(("x"*4)+(" ")+("x")+(" ")+("x"*4))
-    print(("x"*5)+(" ")+("x"*5))
-    print(("x"*11) + ("\n") + ("x"*11) + "\n")
+    print("""
+
+
+
+
+                                                                                                      ..
+                                                                                                      ..
+                                                                                                      ..
+                                                                                                      ..
+                                                                                                      ..
+                                                                                                      ..
+                                                                                                      .,
+                                                                                                      .,
+                                                                                                      ,,
+                                  ,,,.                                                                ,,
+                                 ./#(,                                                                ,,
+                                 ./#/.                                                                ,,
+                                  *(/.                                                                ,*
+                                  *(*                                                                 ,*
+                                  ,/,                                                                 **
+                                  .*,                                                                 **
+                                  .,.                                                                 **
+                                   .                                                                  **
+                                                                                                      **
+                                                                                                      **
+                                                                                                      */
+                                                                                                      //.
+                                                                                                     .//.
+                                                                                                     .//.
+                                                                                                     .//.
+                                                                                                     .//.
+                                                                                                     .//.
+                                                                                                     .//.
+                                                    ..,,...                                          ./(.              ...,,,..
+                                 ./#(,          ,/(#%%%#%%%#(*.         ./#/.              ,(#*      .((.           .*(#%%##%%%(/,
+                                 ,(%(,       ./%(*.         ./##*.      .(%(.              ,#%/      .((.        ,(%#/,        .*(%#*.
+                                 ,(%(,      ,#%,              .#%(,     .(%(.              ,#%/      .((.      ./%#/.             *#%/.
+                                 ,(%(,     *#%(                ,(%(,    .(%(.              ,#%/      .((.      /%#*                ,#%/
+                                 ,(%(,    ,(%(,                 *#%/.   .(%(.              ,#%/      .((,      #%/.                 *##
+                                 ,(%(,    *%%*                  ./%#,   .(%(.              ,#%/      ,((,     .%%%##################%%%.
+                                 ,(%(,    *%%*                  ./%#,   .(%(.              ,#%/      ,((,     .%#/,,,,,,,,,,,,,,,,,,,,,
+                                 ,(%(,    ,#%/.                 ,(%(.   .(%(,              ,#%/      ,((,     .%#*
+                                 ,(%(,    ./%#*                ./%#*    ./%#*              *%#*      ,##,      #%(.
+                                 ,(%(,      ,#%,              .#%(,      ./%#*           .*#%/.      ,##,      ./%%/.              .,,
+                                 ,(%(,       ./%(*.         .*##*.        ./%%/        .,(%#*.       ,##,        ,(%#/,         .,/#%(.
+                                 ,(%(,         *(%%#(/***/(#%#(.            ,/##(/////(%%#/.         ,##,          ,/#%#(/****/#%%#/,
+                                 ,(%(,           .,*/(((((/*,.                 */(((((/,.            .**.             .//((((((*,.
+                                 ,(%(,
+                                 ,(%(,
+                                 ,(%(,
+                                 ,(%(,
+                                 ,(%(,
+                                 ,(%(,
+                                 ,(%(,
+                                 ,(#(,
+                                 ,(#(.
+                                 ,(#/.
+                                 *##/.
+                                 *##*.
+                                ./##*
+                                ./#(,
+                                ,(#/.
+                                ,(#*
+                               ./#(.
+                               .(#*
+                               ,((,
+                               /(*.
+                               (/.
+                              .(,
+                              **
+                             ,/.
+                            ,/,
+                           ,*,
+                          .*,
+                         .,.
+                       ...
+                       .
+                             """)
+    #print(("█"*11)+("\n")+("█"*11))
+    #print(("█"*3)+(" "*5)+("█"*3)+("\n")+("█"*3)+(" "*5)+("█"*3))
+    #print(("█"*3)+(" ")+("█")+(" ")+("█")+(" ")+("█"*3))
+    #print(("█"*3)+(" ")+("█")+(" ")+("█")+(" ")+("█"*3))
+    #print(("█"*3)+(" "*5)+("█"*3))
+    #print(("█"*4)+(" ")+("█")+(" ")+("█"*4))
+    #print(("█"*5)+(" ")+("█"*5))
+    #print(("█"*11) + ("\n") + ("█"*11) + "\n")
 
 
 def character_check(Ffirst):
@@ -22,11 +101,23 @@ def character_check(Ffirst):
             Ffirst = input("Please enter a valid name \n")
             continue
 
+def hotelProperty():
+    y = 1
+    while y ==1:
+        hotel = input("Is this a Lumen - ""L"" or Joule - ""J"" Account?\n")
+        if hotel in ("L", "l", "Lumen", "lumen"):
+            return "lumen"
+        elif hotel in ("J", "j", "Joule", "joule"):
+            return "joule"
+        else:
+            print("Invalid response")
+            continue
+
 def chooseAccount():
-    # hardcoded list, second list will hold needed accounts for text output
+    # hardcoded list, second list will hold needed accounts for te█t output
     accountHold = ['HOTSOS', 'V1', 'Universal Desktop', 'EMAIL', 'NEWTORK', 'Infogenesis', 'Ericom', 'Delphi']
     accountActive = []
-    
+
     #Loop through the accounts asking if they are needed
     for i in accountHold:
         Skull()
@@ -41,17 +132,16 @@ def chooseAccount():
             os.system('cls')
     return accountActive
 
-def printout(first, last, account):
-    
+def printout(first, last, account, property,tpass):
 
     if account == "HOTSOS":
         print(account +"\n")
         print("USER: " +first[0][0]+last.lower()+"jh")
-        print("PASS: " +last.capitalize()+"1530 \n")
+        print("PASS: " +last.capitalize()+tpass+" \n")
     elif account == "EMAIL":
         print(account +"\n")
-        print("USER: " +first[0][0]+last.lower()+"thejouledallas.com")
-        print("PASS: " +last.capitalize()+"1530 \n")
+        print("USER: " +first[0][0]+last.lower()+"@the" + property + "dallas.com")
+        print("PASS: " +last.capitalize()+tpass+" \n")
     elif account == "V1":
         print(account +"\n")
         print("USER: " +first[0][0]+last.lower())
@@ -71,11 +161,11 @@ def printout(first, last, account):
     else:
         print(account +"\n")
         print("USER: " +first[0][0]+last.lower())
-        print("PASS: " +last.capitalize()+"1530 \n")
+        print("PASS: " +last.capitalize()+tpass+" \n")
 
-def count_printout(i, first, last, active):
+def count_printout(i, first, last, active,property,tpass):
     while i <len(active):
-        printout(first,last,active[i])
+        printout(first,last,active[i],property,tpass)
         i += 1
 
 def main():
@@ -86,10 +176,16 @@ def main():
         Skull()
         last = input("Last Name: ")
         last = character_check(last)
+        property = hotelProperty()
+        tpass = "hold"
+        if property == "lumen":
+            tpass = "6101"
+        else:
+            tpass = "1530"
         active= chooseAccount()
         Skull()
         i = 0
-        count_printout(i, first, last, active)
+        count_printout(i, first, last, active,property,tpass)
         os.system('pause')
         #while i <len(active):
 
@@ -99,3 +195,7 @@ def main():
         print("1 is no longer True, Something went wrong. ")
 
 main()
+
+
+
+
